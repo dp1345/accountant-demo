@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AGILE Accountants — Modern accounting for ambitious businesses</title>
+<meta name="description" content="AGILE Accountants — Chartered Certified Accountants in Birmingham specialising in cloud accounting and tax advisory services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#031827; --navy2:#062438; --teal:#10aeb5; --teal2:#28c4c7;
+  --ink:#102338; --muted:#526174; --line:#dfe8eb; --pale:#eef8f8; --white:#fff;
+  --shadow:0 12px 32px rgba(10,35,50,.08);
+  --radius:9px; --max:920px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"DM Sans",Arial,sans-serif;background:#fff;line-height:1.55}
+a{text-decoration:none;color:inherit}
+.container{width:min(calc(100% - 56px),var(--max));margin:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:5px;font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.2s ease}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:#0b989f;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:#fff;border-color:#fff}
+.btn-light{background:#fff;color:#087e87}
+header{height:72px;background:var(--navy);color:#fff;display:flex;align-items:center;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;min-width:190px}
+.brand-mark{width:46px;height:auto;max-height:44px;object-fit:contain;display:block}
+.brand-name{font-size:21px;line-height:.9;font-weight:700;letter-spacing:.08em}
+.brand-name span{display:block;font-size:10px;letter-spacing:.18em;margin-top:5px;font-weight:500}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:13px}
+.navlinks a{opacity:.95}
+.navlinks a:hover{color:var(--teal2)}
+.hero{min-height:385px;background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:0 0 0 42%;background:linear-gradient(90deg,var(--navy) 0%,rgba(3,24,39,.55) 18%,rgba(3,24,39,.05) 48%,rgba(3,24,39,.12)),url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1500&q=85") center/cover}
+.hero-inner{position:relative;z-index:1;min-height:385px;display:flex;align-items:center}
+.hero-copy{width:54%;padding:42px 0 48px}
+.kicker,.section-kicker{color:#11b9c1;font-size:11px;letter-spacing:.12em;font-weight:700;text-transform:uppercase}
+h1{font-family:"Playfair Display",Georgia,serif;font-size:43px;line-height:1.08;margin:13px 0 15px;letter-spacing:-.02em}
+h1 em{color:var(--teal2);font-style:normal}
+.hero-copy p{max-width:450px;font-size:15px;color:#dce6eb;margin:0 0 22px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:9px;margin-top:22px;flex-wrap:wrap}
+.trust-item{border:1px solid rgba(255,255,255,.14);border-radius:5px;padding:8px 11px;min-width:108px;font-size:10px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.1)}
+.trust-icon{width:25px;height:25px;border:1px solid rgba(40,196,199,.7);border-radius:50%;display:grid;place-items:center;color:var(--teal2);font-weight:700;font-size:11px}
+section{padding:48px 0}
+.center{text-align:center}
+.section-title{font-family:"Playfair Display",Georgia,serif;font-size:28px;line-height:1.15;margin:7px 0 8px}
+.section-lead{max-width:610px;margin:0 auto;color:var(--muted);font-size:13px}
+.services{background:#fff}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.service{border:1px solid var(--line);border-radius:7px;padding:18px;box-shadow:0 4px 12px rgba(8,35,50,.03);min-height:120px}
+.service:hover{box-shadow:var(--shadow);transform:translateY(-2px);transition:.2s}
+.service-top{display:flex;gap:12px;align-items:flex-start}
+.service-icon{width:42px;height:42px;border-radius:7px;background:#edf8f8;color:#079fa7;display:grid;place-items:center;font-size:21px;flex:0 0 auto}
+.service h3{font-family:"Playfair Display",Georgia,serif;font-size:15px;margin:2px 0 5px;line-height:1.15}
+.service p{font-size:11px;color:var(--muted);margin:0}
+.learn{display:inline-block;margin-top:9px;color:#0499a1;font-size:11px;font-weight:700}
+.about{background:linear-gradient(110deg,#eef8f8,#fff)}
+.about-grid{display:grid;grid-template-columns:1fr 1.35fr .7fr;gap:28px;align-items:center}
+.about-photo{height:205px;border-radius:7px;overflow:hidden}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.about h2{font-family:"Playfair Display",Georgia,serif;font-size:22px;line-height:1.15;margin:5px 0 10px}
+.about p{font-size:12px;color:var(--muted);margin:0 0 9px}
+.person{font-family:"Playfair Display",Georgia,serif;font-size:16px;font-weight:700;margin-top:11px}
+.role{color:#0499a1;font-weight:700;font-size:11px}
+.stats{border-left:1px solid var(--line);padding-left:22px}
+.stat{padding:12px 0;border-bottom:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{display:block;font-family:"Playfair Display",Georgia,serif;font-size:17px}
+.stat span{font-size:10px;color:var(--muted)}
+.process{padding-top:40px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}
+.step{text-align:center;position:relative}
+.step:not(:last-child):after{content:"";position:absolute;top:19px;left:72%;width:56%;border-top:1px dashed #a8cbd0}
+.step-number{width:28px;height:28px;background:#0d9fa7;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;margin:0 auto 10px}
+.step-icon{font-size:25px;color:#069da5;margin-bottom:7px}
+.step h3{font-family:"Playfair Display",Georgia,serif;font-size:14px;margin:0 0 4px}
+.step p{font-size:10px;color:var(--muted);margin:0 auto;max-width:150px}
+.cta{background:linear-gradient(100deg,#079ea7,#04576c);color:#fff;padding:25px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.cta h2{font-family:"Playfair Display",Georgia,serif;font-size:21px;margin:0 0 3px}
+.cta p{margin:0;font-size:12px;color:#d8f0f2}
+footer{background:var(--navy);color:#fff;padding:30px 0 14px}
+.footer-grid{display:grid;grid-template-columns:1.35fr .8fr .95fr .95fr;gap:34px}
+footer h3{font-size:11px;margin:0 0 10px;color:#fff}
+footer p,footer a{font-size:10px;color:#c5d2d8}
+footer a{display:block;margin:5px 0}
+.footer-brand p{max-width:210px}
+.socials{display:flex;gap:8px;margin-top:12px}
+.social{width:24px;height:24px;border:1px solid #4e6773;border-radius:50%;display:grid;place-items:center;font-size:10px}
+.bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:11px;display:flex;justify-content:space-between;color:#a9bbc3;font-size:9px}
+@media(max-width:850px){
+  .navlinks{display:none}.container{width:min(calc(100% - 32px),var(--max))}
+  .hero:after{inset:0;background:linear-gradient(90deg,rgba(3,24,39,.96),rgba(3,24,39,.65)),url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85") center/cover}
+  .hero-copy{width:100%}h1{font-size:38px}
+  .service-grid{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr 1.4fr}.stats{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  header{height:64px}.brand-name{font-size:18px}.brand{min-width:0}
+  .hero-inner{min-height:520px}.hero-copy{padding:55px 0}.hero{min-height:520px}
+  h1{font-size:35px}.hero-copy p{font-size:14px}.trust-item{min-width:calc(50% - 5px)}
+  section{padding:38px 0}.service-grid,.about-grid,.steps{grid-template-columns:1fr}
+  .about-photo{height:250px}.step:not(:last-child):after{display:none}
+  .cta-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}
+  .bottom{flex-direction:column;gap:7px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img class="brand-mark" src="data:image/png;base64,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" alt="AGILE Accountants logo">
+      <div class="brand-name">AGILE<span>ACCOUNTANTS</span></div>
+    </a>
+    <nav class="navlinks">
+      <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a>
+      <a href="#industries">Industries</a><a href="#resources">Resources</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Get a Quote</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="kicker">Chartered Certified Accountants</div>
+      <h1>Modern accounting<br>for ambitious <em>businesses</em></h1>
+      <p>MTD Ready, cloud accounting and proactive tax advisory services that help you save time, pay less tax and make smarter business decisions.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Build Your Package →</a>
+        <a class="btn btn-ghost" href="#contact">Talk to an Expert</a>
+      </div>
+      <div class="trust">
+        <div class="trust-item"><span class="trust-icon">✓</span><span><b>MTD</b><br>Ready</span></div>
+        <div class="trust-item"><span class="trust-icon">X</span><span><b>Xero</b><br>Platinum Partner</span></div>
+        <div class="trust-item"><span class="trust-icon">£</span><span><b>Fixed</b><br>Monthly Pricing</span></div>
+        <div class="trust-item"><span class="trust-icon">✓</span><span><b>ACCA</b><br>Approved Employer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="center">
+      <div class="section-kicker">What we do</div>
+      <h2 class="section-title">Services built around your success</h2>
+      <p class="section-lead">From day-to-day bookkeeping to strategic planning, we provide technology-led services that help you grow with confidence.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service"><div class="service-top"><div class="service-icon">▤</div><div><h3>Bookkeeping &amp; Accounting</h3><p>Accurate, up-to-date records using cloud technology so you always know where you stand.</p><a class="learn" href="#">Learn more →</a></div></div></article>
+      <article class="service"><div class="service-top"><div class="service-icon">◔</div><div><h3>Tax &amp; Compliance</h3><p>Proactive tax planning and compliance services to minimise your tax bill and keep you compliant.</p><a class="learn" href="#">Learn more →</a></div></div></article>
+      <article class="service"><div class="service-top"><div class="service-icon">▥</div><div><h3>Management Reporting &amp; Business Plans</h3><p>Insightful reports and plans that help you make confident decisions and achieve your goals.</p><a class="learn" href="#">Learn more →</a></div></div></article>
+      <article class="service"><div class="service-top"><div class="service-icon">♙</div><div><h3>Back-office Outsourcing</h3><p>We handle your back office processes so you can focus on running and growing your business.</p><a class="learn" href="#">Learn more →</a></div></div></article>
+      <article class="service"><div class="service-top"><div class="service-icon">♧</div><div><h3>Payroll</h3><p>Accurate, on-time payroll with auto enrolment and RTI compliance fully taken care of.</p><a class="learn" href="#">Learn more →</a></div></div></article>
+      <article class="service"><div class="service-top"><div class="service-icon">☁</div><div><h3>Xero &amp; Cloud Accounting</h3><p>Work smarter in the cloud with real-time data, automation and seamless integration.</p><a class="learn" href="#">Learn more →</a></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-photo"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85" alt="Professional accountant"></div>
+    <div>
+      <div class="section-kicker">About us</div>
+      <h2>People. Technology. Better outcomes.</h2>
+      <p>AGILE Accountants is a Birmingham-based practice built on the belief that great numbers drive great businesses. We combine cloud technology with proactive advice to help you grow, innovate and succeed.</p>
+      <div class="person">Adam Wright FCCA FMAAT</div>
+      <div class="role">Co-Founder &amp; Partner</div>
+      <p>Accountant for startup and growing businesses — helping Managing Directors and Owners to grow their business and understand their figures.</p>
+      <a class="btn" style="border:1px solid #079fa7;color:#078f97;padding:9px 14px;font-size:11px" href="#">More About Us →</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>150+</strong><span>Happy clients</span></div>
+      <div class="stat"><strong>10+</strong><span>Years of experience</span></div>
+      <div class="stat"><strong>Qualified</strong><span>FCCA · FMAAT</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <div class="center">
+      <div class="section-kicker">Our process</div>
+      <h2 class="section-title">Simple steps. Better results.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-number">1</div><div class="step-icon">◌</div><h3>We talk</h3><p>We get to know you, your business and your goals.</p></div>
+      <div class="step"><div class="step-number">2</div><div class="step-icon">▣</div><h3>We analyse</h3><p>We review your numbers and identify opportunities.</p></div>
+      <div class="step"><div class="step-number">3</div><div class="step-icon">↗</div><h3>We advise</h3><p>We provide clear advice and a plan tailored to you.</p></div>
+      <div class="step"><div class="step-number">4</div><div class="step-icon">➚</div><h3>You grow</h3><p>We support you with the tools, insights and confidence to grow.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container cta-inner">
+    <div><h2>Ready to work with a different kind of accountant?</h2><p>Let's build the right package for your business.</p></div>
+    <div class="actions"><a class="btn btn-light" href="mailto:info@agileaccountants.co.uk">Get a Quote →</a><a class="btn btn-ghost" href="tel:01215170262">Book a Call</a></div>
+  </div>
+</section>
+</main>
+
+<footer id="resources">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#"><img class="brand-mark" src="data:image/png;base64,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" alt="AGILE Accountants logo"><div class="brand-name">AGILE<span>ACCOUNTANTS</span></div></a>
+        <p>MTD Ready, Chartered Certified Accountants specialising in cloud accounting and tax advisory services.</p>
+        <div class="socials"><span class="social">in</span><span class="social">X</span><span class="social">f</span></div>
+      </div>
+      <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#industries">Industries</a><a href="#resources">Resources</a><a href="#contact">Contact</a></div>
+      <div><h3>Services</h3><a href="#">Bookkeeping &amp; Accounting</a><a href="#">Tax &amp; Compliance</a><a href="#">Management Reporting</a><a href="#">Back-office Outsourcing</a><a href="#">Payroll</a><a href="#">Cloud Accounting (Xero)</a></div>
+      <div><h3>Contact Us</h3><p>18 Bennetts Hill<br>Birmingham B2 5QJ</p><a href="tel:01215170262">01215 170 262</a><a href="mailto:info@agileaccountants.co.uk">info@agileaccountants.co.uk</a></div>
+    </div>
+    <div class="bottom"><span>© 2024 AGILE Accountants. All rights reserved.</span><span>Privacy Policy &nbsp; | &nbsp; Terms &amp; Conditions</span></div>
+  </div>
+</footer>
+</body>
+</html>
